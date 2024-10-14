@@ -2,6 +2,7 @@
 	"name": "@alaa/simply-deno",
 	"version": "0.1.0",
 	"tasks": {
+		"install": "deno install --allow-scripts",
 		"start": "deno run ./src/main.ts",
 		"dev": "deno run --watch ./src/main.ts",
 		"test": "deno test",
@@ -16,5 +17,8 @@
 	"publish": {
 		"include": ["src", "LICENSE"],
 		"exclude": ["src/tests"]
+	},
+	"exports": {
+		".": "./src/mod.ts"
 	}
 }
